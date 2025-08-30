@@ -25,7 +25,7 @@ USER user
 # Set up environment
 ENV HOME=/home/user \
     PATH=/home/user/.local/bin:/usr/local/bin:$PATH \
-    PORT=7860 \
+    PORT=8000 \
     PYTHONUNBUFFERED=1
 
 WORKDIR $HOME/app
@@ -34,7 +34,7 @@ WORKDIR $HOME/app
 COPY --chown=user:user . .
 
 # Expose the port the app runs on
-EXPOSE 7860
+EXPOSE 8000
 
 # Command to run the application using Uvicorn
-CMD ["uv", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "7860"]
+CMD ["uv", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
