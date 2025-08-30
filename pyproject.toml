@@ -10,6 +10,7 @@ dependencies = [
     "langchain-core>=0.3.75",
     "langchain-google-genai>=2.1.10",
     "langgraph>=0.6.6",
+    "pydantic>=2.11.7",
     "pydantic-settings>=2.10.1",
     "python-dotenv>=1.1.1",
     "tavily-python>=0.7.11",
