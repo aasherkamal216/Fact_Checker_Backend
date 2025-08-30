@@ -14,8 +14,8 @@ class Settings(BaseSettings):
     POST_WRITER_MODEL: str = "gemini-2.5-flash"
 
     # Tavily Search Configuration
-    TAVILY_SEARCH_DEPTH: str = "advanced"
-    TOP_K: int = 5
+    TAVILY_SEARCH_DEPTH: str = "basic"
+    MAX_RESULTS: int = 3
 
 # Create a single settings instance to be used throughout the application
 settings = Settings()
