@@ -2,9 +2,8 @@
 
 **FactFlow** is a real-time, AI-powered workflow that takes a user's claim, researches it using multiple web sources, and provides a concise, fact-checked verdict with a shareable social media post. This project was developed for the AiForAll Fact-Checker Agent Hackathon.
 
-**[➡️ View the Live Demo on Hugging Face Spaces](https://aasher-fact-checker-ai.hf.space)**
 
- <!-- Optional: Add a screenshot of your app here -->
+<video src="public/fact-checker-demo.mp4" controls width="600"></video>
 
 ---
 
