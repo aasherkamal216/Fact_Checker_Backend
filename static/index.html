@@ -1,0 +1,66 @@
+<!-- static/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FactFlow - AI Fact-Checker</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="/static/assets/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Initial view: Centered input form -->
+        <div id="initial-view">
+            <div class="logo-container">
+                <img src="/static/assets/icon.svg" alt="FactFlow Logo" class="logo">
+                <h1>FactFlow</h1>
+            </div>
+            <p class="subtitle">Your AI-powered fact-checking assistant</p>
+            <form id="claim-form">
+                <div class="input-wrapper">
+                    <textarea id="claim-input" placeholder="Enter a claim to fact-check..." rows="3"></textarea>
+                    <button type="submit" id="submit-button" aria-label="Submit claim">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </form>
+            <div class="suggestions" id="suggestions">
+                <button class="suggestion-chip">Great Wall of China is visible from space.</button>
+                <button class="suggestion-chip">Eating carrots improve your eyesight.</button>
+                <button class="suggestion-chip">The moon landing was faked.</button>
+            </div>
+        </div>
+
+        <!-- Result view: Progress and final output -->
+        <div id="result-view" class="hidden">
+            <header class="result-header">
+                <p><strong>Claim:</strong> <span id="claim-display"></span></p>
+                <button id="new-search-button">
+                    <i class="fas fa-plus"></i> New Search
+                </button>
+            </header>
+            <div class="result-content">
+                <div id="progress-container">
+                    <div id="progress-steps"></div>
+                </div>
+                <div id="final-output-container" class="hidden">
+                     <div id="verdict-container"></div>
+                     <div id="post-container">
+                        <div class="post-header">
+                            <h3>Social Media Post</h3>
+                            <button id="copy-post-button" title="Copy to clipboard">
+                                <i class="far fa-copy"></i>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                        <p id="post-text"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

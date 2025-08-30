@@ -1,7 +1,8 @@
 import json
 from fastapi import FastAPI
-from fastapi.responses import StreamingResponse
+from fastapi.responses import StreamingResponse, HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from workflow.graph import graph_app
@@ -23,6 +24,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Mount static files (HTML, CSS, JS) at /static
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # --- Pydantic Models ---
 
@@ -107,8 +111,16 @@ async def analyze_claim(request: ClaimRequest):
 
     return StreamingResponse(stream_events(), media_type="text/event-stream")
 
-# --- Root Endpoint for Health Check ---
+# --- Health Check Endpoint ---
 
-@app.get("/")
-def read_root():
+@app.get("/health")
+def read_health():
     return {"status": "Fact-Checker API is running"}
+
+# --- Serve Frontend at Root ---
+
+@app.get("/", response_class=HTMLResponse)
+async def serve_frontend():
+    """Serves the index.html frontend at the root path."""
+    with open("static/index.html") as f:
+        return f.read()
