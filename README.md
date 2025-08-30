@@ -2,6 +2,10 @@
 
 **FactFlow** is a real-time, AI-powered workflow that takes a user's claim, researches it using multiple web sources, and provides a concise, fact-checked verdict with a shareable social media post. This project was developed for the AiForAll Fact-Checker Agent Hackathon.
 
+[Click here to watch the demo](https://drive.google.com/file/d/1VZPvzuXtpp829IYbvhCYchV713ruijPJ/view?usp=sharing)
+
+<img src="public/interface1.png" width="600"></img>
+<img src="public/interface2.png" width="600"></img>
 
 <video src="public/fact-checker-demo.mp4" controls width="600"></video>
 
