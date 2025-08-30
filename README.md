@@ -28,7 +28,7 @@
 | **Search Tool**   | [**Tavily Search API**](https://tavily.com/): An AI-native search engine that provides clean, summarized results ideal for agent consumption.      |
 | **API Server**    | [**FastAPI**](https://fastapi.tiangolo.com/): For creating a high-performance, asynchronous API that supports Server-Sent Events (SSE) for streaming. |
 | **Frontend**      | **HTML5, CSS3, JavaScript (Vanilla)**: For a lightweight, dependency-free, and modern user interface.                                           |
-| **Deployment**    | [**Hugging Face Spaces (Docker)**](https://huggingface.co/docs/hub/spaces): For easy, reproducible, and shareable deployment.                     |
+| **Deployment**    | [**Koyeb (Docker)**](https://app.koyeb.com/): For easy, reproducible, and shareable deployment.                     |
 
 ---
 
